@@ -1,0 +1,88 @@
+.kafan-turntable{
+    position: relative;
+    width: 258px;
+    padding-top: 258px;
+    border-radius: 100%;
+    overflow: hidden;
+    &__item{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 2;
+        transform: translateX(-50%);
+        height: 50%;
+        >div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 11px 14px 0px;
+            transform-origin: 50% 100%;
+            text-align: center;
+        }
+        p{
+            display: -webkit-box;
+            -webkit-line-clamp: 2;  // 控制多行的行数
+            -webkit-box-orient: vertical;
+            overflow:hidden; 
+            text-overflow:ellipsis;
+            font-size: 12px;
+        }
+        img{
+            display: block;
+            width: 25px;
+            margin: 4px auto 0;
+        }
+    }
+
+    &__rotate{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &--rotating{
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0, 0, 0.33, 0.97);
+        }
+        &--reset{
+            transform: rotate(0deg);
+        }
+    }
+    &__btn{
+        position: relative;
+        display: block;
+        width: 93.5px;
+        height: 104.5px;
+        background: url('../img/btn_start.png') no-repeat;
+        background-size: contain;
+        background-position: center center;
+        &--animating{
+            animation: showScale .4s ease infinite alternate;
+            transform-origin: 50% 50%;
+        }
+        &__con{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__canvas{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+@keyframes showScale {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
