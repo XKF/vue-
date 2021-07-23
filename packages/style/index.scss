@@ -55,9 +55,11 @@
         display: block;
         width: 93.5px;
         height: 104.5px;
+        padding-bottom: 11.5px;
         background: url('../img/btn_start.png') no-repeat;
         background-size: contain;
-        background-position: center center;
+        background-position: center top;
+        box-sizing: content-box;
         &--animating{
             animation: showScale .4s ease infinite alternate;
             transform-origin: 50% 50%;

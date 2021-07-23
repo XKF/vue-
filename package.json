@@ -1,6 +1,6 @@
 {
   "name": "@kafan/vue-turntable",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "转盘组件",
   "main": "lib/index.umd.min.js",
   "keyword": "vue-turntable turntable",
