@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import TurnTable from '@kafan/vue-turntable'
-import '@kafan/vue-turntable/lib/index.css'
+import TurnTable from '../packages/'
 
 Vue.config.productionTip = false
 
