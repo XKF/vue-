@@ -107,15 +107,12 @@ function turnTable({
 	})
 	if(targetContainer){
 		targetContainer.appendChild(turntableDom.$el);
-		setTimeout(()=>{
-			drawTurnTable()
-		},0)
 	}else{
 		document.body.appendChild(turntableDom.$el);
-		setTimeout(()=>{
-			drawTurnTable()
-		},0)
 	}
+	setTimeout(()=>{
+		drawTurnTable()
+	},0)
 	return turntableDom;
 }
 
